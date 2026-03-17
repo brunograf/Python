@@ -1,0 +1,11 @@
+fibonnaci = int(input('Quantos termos da sequência de Fibonnaci vocé quer mostrar? '))
+t1 = 0
+t2 = 1
+print(f'{t1} -> {t2}', end='')
+c = 3
+while c <= fibonnaci:
+    t3 = t1 + t2
+    print(f' -> {t3}', end='')
+    t1 = t2
+    t2 = t3
+    c += 1
