@@ -9,16 +9,16 @@ def contador(i, f, p):
         cont = i
         print(f'Contagem de {i} para {f} de {p} em {p}')
         while cont <= f:
-            print(f'{cont} ', end='')
-            sleep(0.2)
+            print(f'{cont} ', end='', flush=True)
+            sleep(0.5)
             cont += p
         print('FIM')
     else:
         cont = i
         print(f'Contagem de {i} para {f} de {p} em {p}')
         while cont >= f:
-            print(f'{cont} ', end='')
-            sleep(0.2)
+            print(f'{cont} ', end='', flush=True)
+            sleep(0.5)
             cont -= p
         print('FIM')
 
