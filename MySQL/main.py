@@ -1,12 +1,25 @@
 import mysql.connector
 
-conn = mysql.connector.connect(
+# Objeto de conexão com o banco de dados MySQL
+con = mysql.connector.connect(
     host="localhost",
-    database="testedb",
+    database="academia",
     user="root",
     password="1341408544"
 )
 
-mycursor = conn.cursor()
-mycursor.execute("CREATE DATABASE IF NOT EXISTS testedb")
-mycursor.execute("CREATE TABLE Members (MemberID int, LastName varchar(255))")
+# Verificar se a conexão foi estabelecida com sucesso
+if con.is_connected():
+    db_Info = con.get_server_info()
+    print("Conexão com o banco de dados MySQL estabelecida com sucesso!")
+    print(f'Informações do servidor: {db_Info}')
+    cursor = con.cursor()
+    cursor.execute("select database();")
+    linha = cursor.fetchone()
+    print(f'Conectado ao banco de dados: {linha}')
+
+# Fechar a conexão com o banco de dados
+if con.is_connected():
+    cursor.close()
+    con.close()
+    print("Conexão com o banco de dados MySQL fechada.")
