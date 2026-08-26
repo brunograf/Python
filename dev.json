@@ -1,0 +1,18 @@
+{
+    "nome": "Bruno",
+    "sobrenome": "Graf",
+    "idade": 26,
+    "altura": 1.82,
+    "numeros_preferidos": [
+        7,
+        20,
+        100
+    ],
+    "dev": true,
+    "linguagens": [
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ]
+}
